@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
  <widget xmlns = "http://www.w3.org/ns/widgets"
    xmlns:gap = "http://phonegap.com/ns/1.0"
    id     = "com.phonegap.example9"
@@ -7,7 +7,7 @@
    
  <!--versioncode is optional and Android only -->
  
- <name>Aplicacion9 Geolocalización y Acelerometro</name>
+ <name>Aplicacion9 Geolocalizacion y Acelerometro</name>
  
  <description>
    Aplicacion que te muestra la Geolocalizacion del dispositivo, de acuerdo a sus coordenadas.

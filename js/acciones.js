@@ -3,11 +3,11 @@ $(document).ready(function(e) {
     //watch id se refiere a actual
 	
 	var watchID=null;
-	document.addEventListener("deviceready".Dispositivo_Listo,false);
+	document.addEventListener("deviceready",Dispositivo_Listo,false);
 	
 	//cuando esta listo el dispositivo
 	function Dispositivo_Listo(){
-		comienza();
+		Comienza();
 	}
 	
 	//empieza la observacion de la aceleracion
@@ -15,7 +15,7 @@ $(document).ready(function(e) {
 		
 		//Actualiza la aceleracion cada 2 segundos
 		
-		var opciones={frecuency:2000};
+		var opciones={frequency:2000};
 		
 		watchID=navigator.accelerometer.watchAcceleration(Correcto,Error,opciones);
 		navigator.geolocation.getCurrentPosition(Localiza,ErrorLocalizacion);
@@ -29,7 +29,7 @@ $(document).ready(function(e) {
 		}
 	}
 	//correcto:Toma una Captura de la aceleracion
-	function Correcto(acceleracion){
+	function Correcto(acceleration){
 		var element=document.getElementById('acelerometro');
 		
 		element.innerHTML='Aceleracion en X:'+acceleration.x+'<br/>'+
@@ -44,7 +44,7 @@ $(document).ready(function(e) {
 	//exito al localizar
 	function Localiza(posicion){
 		var element=document.getElementById('geolocalizacion');
-		element.innerHTML='latitud:' +posicion.coords.latitude +'<br/>' +
+		element.innerHTML='Latitud:' +posicion.coords.latitude +'<br/>' +
 		'Longitud:' +posicion.coords.longitude +'<br/>' +
 		'Precision:' +posicion.coords.accuracy +'<br/>' +
 		'Intervalo:' +posicion.timestamp +'<br/>';
